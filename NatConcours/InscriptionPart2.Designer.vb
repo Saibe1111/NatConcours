@@ -22,6 +22,7 @@ Partial Class InscriptionPart2
 	'Ne la modifiez pas à l'aide de l'éditeur de code.
 	<System.Diagnostics.DebuggerStepThrough()>
 	Private Sub InitializeComponent()
+		Me.components = New System.ComponentModel.Container()
 		Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(InscriptionPart2))
 		Me.ButtonSuivant = New System.Windows.Forms.Button()
 		Me.Titre = New System.Windows.Forms.Label()
@@ -57,10 +58,11 @@ Partial Class InscriptionPart2
 		Me.CheckBoxRéseauOral = New System.Windows.Forms.CheckBox()
 		Me.CheckBoxGestionOral = New System.Windows.Forms.CheckBox()
 		Me.GroupBoxOption = New System.Windows.Forms.GroupBox()
+		Me.ComboBoxOption = New System.Windows.Forms.ComboBox()
 		Me.RadioButtonNon = New System.Windows.Forms.RadioButton()
 		Me.RadioButtonOui = New System.Windows.Forms.RadioButton()
 		Me.ButtonQuitter = New System.Windows.Forms.Button()
-		Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+		Me.Timer = New System.Windows.Forms.Timer(Me.components)
 		Me.GroupBoxNomPrénom.SuspendLayout()
 		Me.GroupBoxRégion.SuspendLayout()
 		Me.GroupBoxEcrit.SuspendLayout()
@@ -181,14 +183,14 @@ Partial Class InscriptionPart2
 		Me.LabelChoixEcrit.AutoSize = True
 		Me.LabelChoixEcrit.Location = New System.Drawing.Point(6, 24)
 		Me.LabelChoixEcrit.Name = "LabelChoixEcrit"
-		Me.LabelChoixEcrit.Size = New System.Drawing.Size(79, 13)
+		Me.LabelChoixEcrit.Size = New System.Drawing.Size(85, 13)
 		Me.LabelChoixEcrit.TabIndex = 15
-		Me.LabelChoixEcrit.Text = "Choix restants: "
+		Me.LabelChoixEcrit.Text = "Choix restants: 4"
 		'
 		'CheckBoxMathématiquesEcrit
 		'
 		Me.CheckBoxMathématiquesEcrit.AutoSize = True
-		Me.CheckBoxMathématiquesEcrit.Location = New System.Drawing.Point(9, 280)
+		Me.CheckBoxMathématiquesEcrit.Location = New System.Drawing.Point(9, 212)
 		Me.CheckBoxMathématiquesEcrit.Name = "CheckBoxMathématiquesEcrit"
 		Me.CheckBoxMathématiquesEcrit.Size = New System.Drawing.Size(98, 17)
 		Me.CheckBoxMathématiquesEcrit.TabIndex = 10
@@ -198,7 +200,7 @@ Partial Class InscriptionPart2
 		'CheckBoxExpressionEcrit
 		'
 		Me.CheckBoxExpressionEcrit.AutoSize = True
-		Me.CheckBoxExpressionEcrit.Location = New System.Drawing.Point(9, 257)
+		Me.CheckBoxExpressionEcrit.Location = New System.Drawing.Point(9, 120)
 		Me.CheckBoxExpressionEcrit.Name = "CheckBoxExpressionEcrit"
 		Me.CheckBoxExpressionEcrit.Size = New System.Drawing.Size(77, 17)
 		Me.CheckBoxExpressionEcrit.TabIndex = 9
@@ -208,7 +210,7 @@ Partial Class InscriptionPart2
 		'CheckBoxSystèmeEcrit
 		'
 		Me.CheckBoxSystèmeEcrit.AutoSize = True
-		Me.CheckBoxSystèmeEcrit.Location = New System.Drawing.Point(9, 235)
+		Me.CheckBoxSystèmeEcrit.Location = New System.Drawing.Point(9, 281)
 		Me.CheckBoxSystèmeEcrit.Name = "CheckBoxSystèmeEcrit"
 		Me.CheckBoxSystèmeEcrit.Size = New System.Drawing.Size(66, 17)
 		Me.CheckBoxSystèmeEcrit.TabIndex = 8
@@ -218,7 +220,7 @@ Partial Class InscriptionPart2
 		'CheckBoxLangageJavaEcrit
 		'
 		Me.CheckBoxLangageJavaEcrit.AutoSize = True
-		Me.CheckBoxLangageJavaEcrit.Location = New System.Drawing.Point(9, 212)
+		Me.CheckBoxLangageJavaEcrit.Location = New System.Drawing.Point(9, 189)
 		Me.CheckBoxLangageJavaEcrit.Name = "CheckBoxLangageJavaEcrit"
 		Me.CheckBoxLangageJavaEcrit.Size = New System.Drawing.Size(94, 17)
 		Me.CheckBoxLangageJavaEcrit.TabIndex = 7
@@ -228,7 +230,7 @@ Partial Class InscriptionPart2
 		'CheckBoxDroitEcrit
 		'
 		Me.CheckBoxDroitEcrit.AutoSize = True
-		Me.CheckBoxDroitEcrit.Location = New System.Drawing.Point(9, 189)
+		Me.CheckBoxDroitEcrit.Location = New System.Drawing.Point(9, 97)
 		Me.CheckBoxDroitEcrit.Name = "CheckBoxDroitEcrit"
 		Me.CheckBoxDroitEcrit.Size = New System.Drawing.Size(48, 17)
 		Me.CheckBoxDroitEcrit.TabIndex = 6
@@ -238,7 +240,7 @@ Partial Class InscriptionPart2
 		'CheckBoxRéseauEcrit
 		'
 		Me.CheckBoxRéseauEcrit.AutoSize = True
-		Me.CheckBoxRéseauEcrit.Location = New System.Drawing.Point(9, 166)
+		Me.CheckBoxRéseauEcrit.Location = New System.Drawing.Point(9, 258)
 		Me.CheckBoxRéseauEcrit.Name = "CheckBoxRéseauEcrit"
 		Me.CheckBoxRéseauEcrit.Size = New System.Drawing.Size(63, 17)
 		Me.CheckBoxRéseauEcrit.TabIndex = 5
@@ -248,7 +250,7 @@ Partial Class InscriptionPart2
 		'CheckBoxLangageCEcrit
 		'
 		Me.CheckBoxLangageCEcrit.AutoSize = True
-		Me.CheckBoxLangageCEcrit.Location = New System.Drawing.Point(9, 143)
+		Me.CheckBoxLangageCEcrit.Location = New System.Drawing.Point(9, 166)
 		Me.CheckBoxLangageCEcrit.Name = "CheckBoxLangageCEcrit"
 		Me.CheckBoxLangageCEcrit.Size = New System.Drawing.Size(78, 17)
 		Me.CheckBoxLangageCEcrit.TabIndex = 4
@@ -258,7 +260,7 @@ Partial Class InscriptionPart2
 		'CheckBoxBaseDeDonnéesEcrit
 		'
 		Me.CheckBoxBaseDeDonnéesEcrit.AutoSize = True
-		Me.CheckBoxBaseDeDonnéesEcrit.Location = New System.Drawing.Point(9, 120)
+		Me.CheckBoxBaseDeDonnéesEcrit.Location = New System.Drawing.Point(9, 74)
 		Me.CheckBoxBaseDeDonnéesEcrit.Name = "CheckBoxBaseDeDonnéesEcrit"
 		Me.CheckBoxBaseDeDonnéesEcrit.Size = New System.Drawing.Size(109, 17)
 		Me.CheckBoxBaseDeDonnéesEcrit.TabIndex = 3
@@ -268,7 +270,7 @@ Partial Class InscriptionPart2
 		'CheckBoxProgrammationWebEcrit
 		'
 		Me.CheckBoxProgrammationWebEcrit.AutoSize = True
-		Me.CheckBoxProgrammationWebEcrit.Location = New System.Drawing.Point(9, 97)
+		Me.CheckBoxProgrammationWebEcrit.Location = New System.Drawing.Point(9, 235)
 		Me.CheckBoxProgrammationWebEcrit.Name = "CheckBoxProgrammationWebEcrit"
 		Me.CheckBoxProgrammationWebEcrit.Size = New System.Drawing.Size(119, 17)
 		Me.CheckBoxProgrammationWebEcrit.TabIndex = 2
@@ -278,7 +280,7 @@ Partial Class InscriptionPart2
 		'CheckBoxGestionEcrit
 		'
 		Me.CheckBoxGestionEcrit.AutoSize = True
-		Me.CheckBoxGestionEcrit.Location = New System.Drawing.Point(9, 74)
+		Me.CheckBoxGestionEcrit.Location = New System.Drawing.Point(9, 143)
 		Me.CheckBoxGestionEcrit.Name = "CheckBoxGestionEcrit"
 		Me.CheckBoxGestionEcrit.Size = New System.Drawing.Size(62, 17)
 		Me.CheckBoxGestionEcrit.TabIndex = 1
@@ -319,14 +321,14 @@ Partial Class InscriptionPart2
 		Me.LabelChoixOral.AutoSize = True
 		Me.LabelChoixOral.Location = New System.Drawing.Point(6, 24)
 		Me.LabelChoixOral.Name = "LabelChoixOral"
-		Me.LabelChoixOral.Size = New System.Drawing.Size(79, 13)
+		Me.LabelChoixOral.Size = New System.Drawing.Size(85, 13)
 		Me.LabelChoixOral.TabIndex = 16
-		Me.LabelChoixOral.Text = "Choix restants: "
+		Me.LabelChoixOral.Text = "Choix restants: 3"
 		'
 		'CheckBoxEspagnolOral
 		'
 		Me.CheckBoxEspagnolOral.AutoSize = True
-		Me.CheckBoxEspagnolOral.Location = New System.Drawing.Point(6, 231)
+		Me.CheckBoxEspagnolOral.Location = New System.Drawing.Point(6, 116)
 		Me.CheckBoxEspagnolOral.Name = "CheckBoxEspagnolOral"
 		Me.CheckBoxEspagnolOral.Size = New System.Drawing.Size(70, 17)
 		Me.CheckBoxEspagnolOral.TabIndex = 8
@@ -336,7 +338,7 @@ Partial Class InscriptionPart2
 		'CheckBoxChinoisOral
 		'
 		Me.CheckBoxChinoisOral.AutoSize = True
-		Me.CheckBoxChinoisOral.Location = New System.Drawing.Point(6, 208)
+		Me.CheckBoxChinoisOral.Location = New System.Drawing.Point(6, 70)
 		Me.CheckBoxChinoisOral.Name = "CheckBoxChinoisOral"
 		Me.CheckBoxChinoisOral.Size = New System.Drawing.Size(60, 17)
 		Me.CheckBoxChinoisOral.TabIndex = 7
@@ -346,7 +348,7 @@ Partial Class InscriptionPart2
 		'CheckBoxAnglaisOral
 		'
 		Me.CheckBoxAnglaisOral.AutoSize = True
-		Me.CheckBoxAnglaisOral.Location = New System.Drawing.Point(6, 185)
+		Me.CheckBoxAnglaisOral.Location = New System.Drawing.Point(6, 47)
 		Me.CheckBoxAnglaisOral.Name = "CheckBoxAnglaisOral"
 		Me.CheckBoxAnglaisOral.Size = New System.Drawing.Size(60, 17)
 		Me.CheckBoxAnglaisOral.TabIndex = 6
@@ -356,7 +358,7 @@ Partial Class InscriptionPart2
 		'CheckBoxMathématiquesOral
 		'
 		Me.CheckBoxMathématiquesOral.AutoSize = True
-		Me.CheckBoxMathématiquesOral.Location = New System.Drawing.Point(6, 162)
+		Me.CheckBoxMathématiquesOral.Location = New System.Drawing.Point(6, 185)
 		Me.CheckBoxMathématiquesOral.Name = "CheckBoxMathématiquesOral"
 		Me.CheckBoxMathématiquesOral.Size = New System.Drawing.Size(98, 17)
 		Me.CheckBoxMathématiquesOral.TabIndex = 5
@@ -376,7 +378,7 @@ Partial Class InscriptionPart2
 		'CheckBoxSystèmeOral
 		'
 		Me.CheckBoxSystèmeOral.AutoSize = True
-		Me.CheckBoxSystèmeOral.Location = New System.Drawing.Point(6, 116)
+		Me.CheckBoxSystèmeOral.Location = New System.Drawing.Point(6, 231)
 		Me.CheckBoxSystèmeOral.Name = "CheckBoxSystèmeOral"
 		Me.CheckBoxSystèmeOral.Size = New System.Drawing.Size(66, 17)
 		Me.CheckBoxSystèmeOral.TabIndex = 3
@@ -396,7 +398,7 @@ Partial Class InscriptionPart2
 		'CheckBoxRéseauOral
 		'
 		Me.CheckBoxRéseauOral.AutoSize = True
-		Me.CheckBoxRéseauOral.Location = New System.Drawing.Point(6, 70)
+		Me.CheckBoxRéseauOral.Location = New System.Drawing.Point(6, 208)
 		Me.CheckBoxRéseauOral.Name = "CheckBoxRéseauOral"
 		Me.CheckBoxRéseauOral.Size = New System.Drawing.Size(63, 17)
 		Me.CheckBoxRéseauOral.TabIndex = 1
@@ -406,7 +408,7 @@ Partial Class InscriptionPart2
 		'CheckBoxGestionOral
 		'
 		Me.CheckBoxGestionOral.AutoSize = True
-		Me.CheckBoxGestionOral.Location = New System.Drawing.Point(6, 48)
+		Me.CheckBoxGestionOral.Location = New System.Drawing.Point(6, 162)
 		Me.CheckBoxGestionOral.Name = "CheckBoxGestionOral"
 		Me.CheckBoxGestionOral.Size = New System.Drawing.Size(62, 17)
 		Me.CheckBoxGestionOral.TabIndex = 0
@@ -415,7 +417,7 @@ Partial Class InscriptionPart2
 		'
 		'GroupBoxOption
 		'
-		Me.GroupBoxOption.Controls.Add(Me.ComboBox1)
+		Me.GroupBoxOption.Controls.Add(Me.ComboBoxOption)
 		Me.GroupBoxOption.Controls.Add(Me.RadioButtonNon)
 		Me.GroupBoxOption.Controls.Add(Me.RadioButtonOui)
 		Me.GroupBoxOption.Location = New System.Drawing.Point(202, 415)
@@ -425,9 +427,19 @@ Partial Class InscriptionPart2
 		Me.GroupBoxOption.TabStop = False
 		Me.GroupBoxOption.Text = "Option"
 		'
+		'ComboBoxOption
+		'
+		Me.ComboBoxOption.FormattingEnabled = True
+		Me.ComboBoxOption.Location = New System.Drawing.Point(8, 41)
+		Me.ComboBoxOption.Name = "ComboBoxOption"
+		Me.ComboBoxOption.Size = New System.Drawing.Size(172, 21)
+		Me.ComboBoxOption.TabIndex = 2
+		Me.ComboBoxOption.Visible = False
+		'
 		'RadioButtonNon
 		'
 		Me.RadioButtonNon.AutoSize = True
+		Me.RadioButtonNon.Checked = True
 		Me.RadioButtonNon.Location = New System.Drawing.Point(91, 19)
 		Me.RadioButtonNon.Name = "RadioButtonNon"
 		Me.RadioButtonNon.Size = New System.Drawing.Size(45, 17)
@@ -443,7 +455,6 @@ Partial Class InscriptionPart2
 		Me.RadioButtonOui.Name = "RadioButtonOui"
 		Me.RadioButtonOui.Size = New System.Drawing.Size(41, 17)
 		Me.RadioButtonOui.TabIndex = 0
-		Me.RadioButtonOui.TabStop = True
 		Me.RadioButtonOui.Text = "Oui"
 		Me.RadioButtonOui.UseVisualStyleBackColor = True
 		'
@@ -456,13 +467,9 @@ Partial Class InscriptionPart2
 		Me.ButtonQuitter.Text = "Quitter"
 		Me.ButtonQuitter.UseVisualStyleBackColor = True
 		'
-		'ComboBox1
+		'Timer
 		'
-		Me.ComboBox1.FormattingEnabled = True
-		Me.ComboBox1.Location = New System.Drawing.Point(8, 41)
-		Me.ComboBox1.Name = "ComboBox1"
-		Me.ComboBox1.Size = New System.Drawing.Size(172, 21)
-		Me.ComboBox1.TabIndex = 2
+		Me.Timer.Interval = 1000
 		'
 		'InscriptionPart2
 		'
@@ -480,9 +487,10 @@ Partial Class InscriptionPart2
 		Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
 		Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
 		Me.MaximizeBox = False
+		Me.MinimizeBox = False
 		Me.Name = "InscriptionPart2"
 		Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-		Me.Text = "NatConcours - Inscription 2/2 - 00:00:00"
+		Me.Text = "NatConcours -Inscription 2/2 - 00: 00:00 - Fin : 1m 30s"
 		Me.GroupBoxNomPrénom.ResumeLayout(False)
 		Me.GroupBoxNomPrénom.PerformLayout()
 		Me.GroupBoxRégion.ResumeLayout(False)
@@ -534,5 +542,6 @@ Partial Class InscriptionPart2
 	Friend WithEvents RadioButtonNon As RadioButton
 	Friend WithEvents RadioButtonOui As RadioButton
 	Friend WithEvents ButtonQuitter As Button
-	Friend WithEvents ComboBox1 As ComboBox
+	Friend WithEvents ComboBoxOption As ComboBox
+	Friend WithEvents Timer As Timer
 End Class

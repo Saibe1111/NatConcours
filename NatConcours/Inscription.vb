@@ -1,5 +1,4 @@
 ﻿Imports System.IO
-Imports System.Text
 
 Module Inscription
 	Private Structure Candidat
@@ -54,7 +53,6 @@ Module Inscription
 		End Try
 		Dim compteur2 As Integer = 0
 
-
 		Dim f As New StreamWriter("NatConcours\Candidats.txt")
 		For Each candidat As Candidat In candidatsInscrits
 			compteur2 = compteur + 1
@@ -107,12 +105,6 @@ Module Inscription
 		'Dim strLine As String
 
 		objStreamReader = New StreamReader("NatConcours\Candidats.txt")
-		'strLine = objStreamReader.ReadLine
-		'
-		'Console.WriteLine(strLine)
-		'strLine = objStreamReader.ReadLine
-		'
-
 		'Numéro
 		Dim temNum As String = objStreamReader.ReadLine
 

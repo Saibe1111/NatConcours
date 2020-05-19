@@ -22,11 +22,11 @@ Partial Class InscriptionPart1
 	'Ne la modifiez pas à l'aide de l'éditeur de code.
 	<System.Diagnostics.DebuggerStepThrough()>
 	Private Sub InitializeComponent()
+		Me.components = New System.ComponentModel.Container()
 		Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(InscriptionPart1))
 		Me.PersonneGroup = New System.Windows.Forms.GroupBox()
 		Me.HScrollBarAge = New System.Windows.Forms.HScrollBar()
 		Me.LabelAge = New System.Windows.Forms.Label()
-		Me.TextBoxAge = New System.Windows.Forms.TextBox()
 		Me.LabelPrénom = New System.Windows.Forms.Label()
 		Me.TextBoxNom = New System.Windows.Forms.TextBox()
 		Me.TextBoxPrénom = New System.Windows.Forms.TextBox()
@@ -41,15 +41,17 @@ Partial Class InscriptionPart1
 		Me.ButtonSuivant = New System.Windows.Forms.Button()
 		Me.Titre = New System.Windows.Forms.Label()
 		Me.ButtonQuitter = New System.Windows.Forms.Button()
+		Me.Timer = New System.Windows.Forms.Timer(Me.components)
+		Me.LabelAgeValeur = New System.Windows.Forms.Label()
 		Me.PersonneGroup.SuspendLayout()
 		Me.AdresseGroup.SuspendLayout()
 		Me.SuspendLayout()
 		'
 		'PersonneGroup
 		'
+		Me.PersonneGroup.Controls.Add(Me.LabelAgeValeur)
 		Me.PersonneGroup.Controls.Add(Me.HScrollBarAge)
 		Me.PersonneGroup.Controls.Add(Me.LabelAge)
-		Me.PersonneGroup.Controls.Add(Me.TextBoxAge)
 		Me.PersonneGroup.Controls.Add(Me.LabelPrénom)
 		Me.PersonneGroup.Controls.Add(Me.TextBoxNom)
 		Me.PersonneGroup.Controls.Add(Me.TextBoxPrénom)
@@ -62,10 +64,14 @@ Partial Class InscriptionPart1
 		'
 		'HScrollBarAge
 		'
+		Me.HScrollBarAge.LargeChange = 1
 		Me.HScrollBarAge.Location = New System.Drawing.Point(61, 71)
+		Me.HScrollBarAge.Maximum = 55
+		Me.HScrollBarAge.Minimum = 18
 		Me.HScrollBarAge.Name = "HScrollBarAge"
 		Me.HScrollBarAge.Size = New System.Drawing.Size(123, 20)
 		Me.HScrollBarAge.TabIndex = 7
+		Me.HScrollBarAge.Value = 18
 		'
 		'LabelAge
 		'
@@ -75,13 +81,6 @@ Partial Class InscriptionPart1
 		Me.LabelAge.Size = New System.Drawing.Size(32, 13)
 		Me.LabelAge.TabIndex = 6
 		Me.LabelAge.Text = "Age :"
-		'
-		'TextBoxAge
-		'
-		Me.TextBoxAge.Location = New System.Drawing.Point(38, 71)
-		Me.TextBoxAge.Name = "TextBoxAge"
-		Me.TextBoxAge.Size = New System.Drawing.Size(20, 20)
-		Me.TextBoxAge.TabIndex = 5
 		'
 		'LabelPrénom
 		'
@@ -95,6 +94,7 @@ Partial Class InscriptionPart1
 		'TextBoxNom
 		'
 		Me.TextBoxNom.Location = New System.Drawing.Point(47, 45)
+		Me.TextBoxNom.MaxLength = 15
 		Me.TextBoxNom.Name = "TextBoxNom"
 		Me.TextBoxNom.Size = New System.Drawing.Size(137, 20)
 		Me.TextBoxNom.TabIndex = 3
@@ -102,6 +102,7 @@ Partial Class InscriptionPart1
 		'TextBoxPrénom
 		'
 		Me.TextBoxPrénom.Location = New System.Drawing.Point(61, 19)
+		Me.TextBoxPrénom.MaxLength = 20
 		Me.TextBoxPrénom.Name = "TextBoxPrénom"
 		Me.TextBoxPrénom.Size = New System.Drawing.Size(123, 20)
 		Me.TextBoxPrénom.TabIndex = 1
@@ -132,6 +133,7 @@ Partial Class InscriptionPart1
 		'TextBoxVille
 		'
 		Me.TextBoxVille.Location = New System.Drawing.Point(44, 70)
+		Me.TextBoxVille.MaxLength = 15
 		Me.TextBoxVille.Name = "TextBoxVille"
 		Me.TextBoxVille.Size = New System.Drawing.Size(199, 20)
 		Me.TextBoxVille.TabIndex = 5
@@ -148,6 +150,7 @@ Partial Class InscriptionPart1
 		'TextBoxAdresse
 		'
 		Me.TextBoxAdresse.Location = New System.Drawing.Point(63, 19)
+		Me.TextBoxAdresse.MaxLength = 30
 		Me.TextBoxAdresse.Name = "TextBoxAdresse"
 		Me.TextBoxAdresse.Size = New System.Drawing.Size(180, 20)
 		Me.TextBoxAdresse.TabIndex = 1
@@ -164,6 +167,7 @@ Partial Class InscriptionPart1
 		'TextBoxCP
 		'
 		Me.TextBoxCP.Location = New System.Drawing.Point(80, 44)
+		Me.TextBoxCP.MaxLength = 5
 		Me.TextBoxCP.Name = "TextBoxCP"
 		Me.TextBoxCP.Size = New System.Drawing.Size(163, 20)
 		Me.TextBoxCP.TabIndex = 3
@@ -207,6 +211,19 @@ Partial Class InscriptionPart1
 		Me.ButtonQuitter.Text = "Quitter"
 		Me.ButtonQuitter.UseVisualStyleBackColor = True
 		'
+		'Timer
+		'
+		Me.Timer.Interval = 1000
+		'
+		'LabelAgeValeur
+		'
+		Me.LabelAgeValeur.AutoSize = True
+		Me.LabelAgeValeur.Location = New System.Drawing.Point(36, 74)
+		Me.LabelAgeValeur.Name = "LabelAgeValeur"
+		Me.LabelAgeValeur.Size = New System.Drawing.Size(19, 13)
+		Me.LabelAgeValeur.TabIndex = 8
+		Me.LabelAgeValeur.Text = "18"
+		'
 		'InscriptionPart1
 		'
 		Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -220,9 +237,10 @@ Partial Class InscriptionPart1
 		Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
 		Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
 		Me.MaximizeBox = False
+		Me.MinimizeBox = False
 		Me.Name = "InscriptionPart1"
 		Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-		Me.Text = "NatConcours - Inscription 1/2 - 00:00:00"
+		Me.Text = "NatConcours - Inscription 1/2 - 00:00:00 - Fin : 1m 00s"
 		Me.PersonneGroup.ResumeLayout(False)
 		Me.PersonneGroup.PerformLayout()
 		Me.AdresseGroup.ResumeLayout(False)
@@ -237,7 +255,6 @@ Partial Class InscriptionPart1
 	Friend WithEvents LabelNom As Label
 	Friend WithEvents HScrollBarAge As HScrollBar
 	Friend WithEvents LabelAge As Label
-	Friend WithEvents TextBoxAge As TextBox
 	Friend WithEvents LabelPrénom As Label
 	Friend WithEvents TextBoxNom As TextBox
 	Friend WithEvents AdresseGroup As GroupBox
@@ -250,4 +267,6 @@ Partial Class InscriptionPart1
 	Friend WithEvents ButtonSuivant As Button
 	Friend WithEvents Titre As Label
 	Friend WithEvents ButtonQuitter As Button
+	Friend WithEvents Timer As Timer
+	Friend WithEvents LabelAgeValeur As Label
 End Class
