@@ -73,13 +73,50 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.vb">
+    <Compile Include="Accueil.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.vb">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <Compile Include="Accueil.Designer.vb">
+      <DependentUpon>Accueil.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Bilan.Designer.vb">
+      <DependentUpon>Bilan.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Bilan.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BilanCandidature.Designer.vb">
+      <DependentUpon>BilanCandidature.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BilanCandidature.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BilanMatière.Designer.vb">
+      <DependentUpon>BilanMatière.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BilanMatière.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Etat.Designer.vb">
+      <DependentUpon>Etat.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Etat.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InscriptionPart1.Designer.vb">
+      <DependentUpon>InscriptionPart1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="InscriptionPart1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InscriptionPart2.Designer.vb">
+      <DependentUpon>InscriptionPart2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="InscriptionPart2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inscription.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -97,6 +134,27 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Accueil.resx">
+      <DependentUpon>Accueil.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bilan.resx">
+      <DependentUpon>Bilan.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BilanCandidature.resx">
+      <DependentUpon>BilanCandidature.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BilanMatière.resx">
+      <DependentUpon>BilanMatière.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Etat.resx">
+      <DependentUpon>Etat.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InscriptionPart1.resx">
+      <DependentUpon>InscriptionPart1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InscriptionPart2.resx">
+      <DependentUpon>InscriptionPart2.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
