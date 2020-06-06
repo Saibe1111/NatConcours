@@ -104,6 +104,24 @@
     <Compile Include="Etat.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Modification.Designer.vb">
+      <DependentUpon>Modification.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Modification.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Supprimer.Designer.vb">
+      <DependentUpon>Supprimer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Supprimer.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Récapitulatif.Designer.vb">
+      <DependentUpon>Récapitulatif.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Récapitulatif.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="InscriptionPart1.Designer.vb">
       <DependentUpon>InscriptionPart1.vb</DependentUpon>
     </Compile>
@@ -148,6 +166,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Etat.resx">
       <DependentUpon>Etat.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modification.resx">
+      <DependentUpon>Modification.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Supprimer.resx">
+      <DependentUpon>Supprimer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Récapitulatif.resx">
+      <DependentUpon>Récapitulatif.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="InscriptionPart1.resx">
       <DependentUpon>InscriptionPart1.vb</DependentUpon>

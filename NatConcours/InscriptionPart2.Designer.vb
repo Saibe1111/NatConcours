@@ -120,6 +120,7 @@ Partial Class InscriptionPart2
 		'
 		'ComboBoxRegion
 		'
+		Me.ComboBoxRegion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
 		Me.ComboBoxRegion.FormattingEnabled = True
 		Me.ComboBoxRegion.Items.AddRange(New Object() {"Auvergne", "Bordelais", "Bourgogne", "Bretagne", "Corse", "Nord", "Normandie", "Paris", "Poitou", "Roussillon"})
 		Me.ComboBoxRegion.Location = New System.Drawing.Point(170, 16)
@@ -429,10 +430,12 @@ Partial Class InscriptionPart2
 		'
 		'ComboBoxOption
 		'
+		Me.ComboBoxOption.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
 		Me.ComboBoxOption.FormattingEnabled = True
 		Me.ComboBoxOption.Location = New System.Drawing.Point(8, 41)
 		Me.ComboBoxOption.Name = "ComboBoxOption"
 		Me.ComboBoxOption.Size = New System.Drawing.Size(172, 21)
+		Me.ComboBoxOption.Sorted = True
 		Me.ComboBoxOption.TabIndex = 2
 		Me.ComboBoxOption.Visible = False
 		'
@@ -464,7 +467,7 @@ Partial Class InscriptionPart2
 		Me.ButtonQuitter.Name = "ButtonQuitter"
 		Me.ButtonQuitter.Size = New System.Drawing.Size(185, 42)
 		Me.ButtonQuitter.TabIndex = 18
-		Me.ButtonQuitter.Text = "Quitter"
+		Me.ButtonQuitter.Text = "Accueil"
 		Me.ButtonQuitter.UseVisualStyleBackColor = True
 		'
 		'Timer
@@ -490,7 +493,7 @@ Partial Class InscriptionPart2
 		Me.MinimizeBox = False
 		Me.Name = "InscriptionPart2"
 		Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-		Me.Text = "NatConcours -Inscription 2/2 - 00: 00:00 - Fin : 1m 30s"
+		Me.Text = "NatConcours"
 		Me.GroupBoxNomPrénom.ResumeLayout(False)
 		Me.GroupBoxNomPrénom.PerformLayout()
 		Me.GroupBoxRégion.ResumeLayout(False)

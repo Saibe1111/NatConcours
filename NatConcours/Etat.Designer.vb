@@ -36,6 +36,7 @@ Partial Class Etat
 		Me.LabelMatièreOral = New System.Windows.Forms.Label()
 		Me.ListBoxMatièreFacultative = New System.Windows.Forms.ListBox()
 		Me.LabelMatièreFacultative = New System.Windows.Forms.Label()
+		Me.ButtonAccueil = New System.Windows.Forms.Button()
 		Me.SuspendLayout()
 		'
 		'ListBoxNuméro
@@ -50,7 +51,7 @@ Partial Class Etat
 		'
 		Me.Titre.AutoSize = True
 		Me.Titre.Font = New System.Drawing.Font("Forte", 36.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-		Me.Titre.Location = New System.Drawing.Point(362, 9)
+		Me.Titre.Location = New System.Drawing.Point(188, 9)
 		Me.Titre.Name = "Titre"
 		Me.Titre.Size = New System.Drawing.Size(291, 52)
 		Me.Titre.TabIndex = 11
@@ -105,7 +106,7 @@ Partial Class Etat
 		Me.ListBoxMatièreEcrite.FormattingEnabled = True
 		Me.ListBoxMatièreEcrite.Location = New System.Drawing.Point(323, 103)
 		Me.ListBoxMatièreEcrite.Name = "ListBoxMatièreEcrite"
-		Me.ListBoxMatièreEcrite.Size = New System.Drawing.Size(263, 199)
+		Me.ListBoxMatièreEcrite.Size = New System.Drawing.Size(117, 199)
 		Me.ListBoxMatièreEcrite.TabIndex = 18
 		'
 		'LabelMatièreEcrit
@@ -113,31 +114,31 @@ Partial Class Etat
 		Me.LabelMatièreEcrit.AutoSize = True
 		Me.LabelMatièreEcrit.Location = New System.Drawing.Point(320, 84)
 		Me.LabelMatièreEcrit.Name = "LabelMatièreEcrit"
-		Me.LabelMatièreEcrit.Size = New System.Drawing.Size(76, 13)
+		Me.LabelMatièreEcrit.Size = New System.Drawing.Size(81, 13)
 		Me.LabelMatièreEcrit.TabIndex = 17
-		Me.LabelMatièreEcrit.Text = "Matières écrit: "
+		Me.LabelMatièreEcrit.Text = "Matières écrits: "
 		'
 		'ListBoxMatièreOral
 		'
 		Me.ListBoxMatièreOral.FormattingEnabled = True
-		Me.ListBoxMatièreOral.Location = New System.Drawing.Point(592, 103)
+		Me.ListBoxMatièreOral.Location = New System.Drawing.Point(446, 102)
 		Me.ListBoxMatièreOral.Name = "ListBoxMatièreOral"
-		Me.ListBoxMatièreOral.Size = New System.Drawing.Size(263, 199)
+		Me.ListBoxMatièreOral.Size = New System.Drawing.Size(103, 199)
 		Me.ListBoxMatièreOral.TabIndex = 20
 		'
 		'LabelMatièreOral
 		'
 		Me.LabelMatièreOral.AutoSize = True
-		Me.LabelMatièreOral.Location = New System.Drawing.Point(589, 84)
+		Me.LabelMatièreOral.Location = New System.Drawing.Point(443, 83)
 		Me.LabelMatièreOral.Name = "LabelMatièreOral"
-		Me.LabelMatièreOral.Size = New System.Drawing.Size(75, 13)
+		Me.LabelMatièreOral.Size = New System.Drawing.Size(80, 13)
 		Me.LabelMatièreOral.TabIndex = 19
-		Me.LabelMatièreOral.Text = "Matières Oral: "
+		Me.LabelMatièreOral.Text = "Matières Orals: "
 		'
 		'ListBoxMatièreFacultative
 		'
 		Me.ListBoxMatièreFacultative.FormattingEnabled = True
-		Me.ListBoxMatièreFacultative.Location = New System.Drawing.Point(861, 103)
+		Me.ListBoxMatièreFacultative.Location = New System.Drawing.Point(555, 102)
 		Me.ListBoxMatièreFacultative.Name = "ListBoxMatièreFacultative"
 		Me.ListBoxMatièreFacultative.Size = New System.Drawing.Size(124, 199)
 		Me.ListBoxMatièreFacultative.TabIndex = 22
@@ -145,17 +146,27 @@ Partial Class Etat
 		'LabelMatièreFacultative
 		'
 		Me.LabelMatièreFacultative.AutoSize = True
-		Me.LabelMatièreFacultative.Location = New System.Drawing.Point(858, 84)
+		Me.LabelMatièreFacultative.Location = New System.Drawing.Point(552, 83)
 		Me.LabelMatièreFacultative.Name = "LabelMatièreFacultative"
 		Me.LabelMatièreFacultative.Size = New System.Drawing.Size(100, 13)
 		Me.LabelMatièreFacultative.TabIndex = 21
 		Me.LabelMatièreFacultative.Text = "Matière facultative: "
 		'
+		'ButtonAccueil
+		'
+		Me.ButtonAccueil.Location = New System.Drawing.Point(12, 308)
+		Me.ButtonAccueil.Name = "ButtonAccueil"
+		Me.ButtonAccueil.Size = New System.Drawing.Size(667, 31)
+		Me.ButtonAccueil.TabIndex = 24
+		Me.ButtonAccueil.Text = "Accueil"
+		Me.ButtonAccueil.UseVisualStyleBackColor = True
+		'
 		'Etat
 		'
 		Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
 		Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-		Me.ClientSize = New System.Drawing.Size(997, 313)
+		Me.ClientSize = New System.Drawing.Size(688, 347)
+		Me.Controls.Add(Me.ButtonAccueil)
 		Me.Controls.Add(Me.ListBoxMatièreFacultative)
 		Me.Controls.Add(Me.LabelMatièreFacultative)
 		Me.Controls.Add(Me.ListBoxMatièreOral)
@@ -193,4 +204,5 @@ Partial Class Etat
 	Friend WithEvents LabelMatièreOral As Label
 	Friend WithEvents ListBoxMatièreFacultative As ListBox
 	Friend WithEvents LabelMatièreFacultative As Label
+	Friend WithEvents ButtonAccueil As Button
 End Class

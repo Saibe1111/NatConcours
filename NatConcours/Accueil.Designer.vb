@@ -33,6 +33,7 @@ Partial Class Accueil
 		Me.NomPrénomGroupe = New System.Windows.Forms.StatusStrip()
 		Me.TitrePied = New System.Windows.Forms.ToolStripStatusLabel()
 		Me.ButtonQuitter = New System.Windows.Forms.Button()
+		Me.ButtonRecommencer = New System.Windows.Forms.Button()
 		Me.NomPrénomGroupe.SuspendLayout()
 		Me.SuspendLayout()
 		'
@@ -127,10 +128,21 @@ Partial Class Accueil
 		Me.ButtonQuitter.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
 		Me.ButtonQuitter.Location = New System.Drawing.Point(12, 250)
 		Me.ButtonQuitter.Name = "ButtonQuitter"
-		Me.ButtonQuitter.Size = New System.Drawing.Size(291, 52)
+		Me.ButtonQuitter.Size = New System.Drawing.Size(294, 52)
 		Me.ButtonQuitter.TabIndex = 8
 		Me.ButtonQuitter.Text = "Quitter le logiciel"
 		Me.ButtonQuitter.UseVisualStyleBackColor = True
+		'
+		'ButtonRecommencer
+		'
+		Me.ButtonRecommencer.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+		Me.ButtonRecommencer.Location = New System.Drawing.Point(162, 192)
+		Me.ButtonRecommencer.Name = "ButtonRecommencer"
+		Me.ButtonRecommencer.Size = New System.Drawing.Size(144, 52)
+		Me.ButtonRecommencer.TabIndex = 9
+		Me.ButtonRecommencer.Text = "Recommencer les inscriptions"
+		Me.ButtonRecommencer.UseVisualStyleBackColor = True
+		Me.ButtonRecommencer.Visible = False
 		'
 		'Accueil
 		'
@@ -138,6 +150,7 @@ Partial Class Accueil
 		Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
 		Me.BackColor = System.Drawing.SystemColors.ButtonFace
 		Me.ClientSize = New System.Drawing.Size(318, 331)
+		Me.Controls.Add(Me.ButtonRecommencer)
 		Me.Controls.Add(Me.ButtonQuitter)
 		Me.Controls.Add(Me.NomPrénomGroupe)
 		Me.Controls.Add(Me.Titre)
@@ -170,4 +183,5 @@ Partial Class Accueil
 	Friend WithEvents NomPrénomGroupe As StatusStrip
 	Friend WithEvents TitrePied As ToolStripStatusLabel
 	Friend WithEvents ButtonQuitter As Button
+	Friend WithEvents ButtonRecommencer As Button
 End Class

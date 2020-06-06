@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class BilanMatière
 	Inherits System.Windows.Forms.Form
 
 	'Form remplace la méthode Dispose pour nettoyer la liste des composants.
-	<System.Diagnostics.DebuggerNonUserCode()> _
+	<System.Diagnostics.DebuggerNonUserCode()>
 	Protected Overrides Sub Dispose(ByVal disposing As Boolean)
 		Try
 			If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class BilanMatière
 	'REMARQUE : la procédure suivante est requise par le Concepteur Windows Form
 	'Elle peut être modifiée à l'aide du Concepteur Windows Form.  
 	'Ne la modifiez pas à l'aide de l'éditeur de code.
-	<System.Diagnostics.DebuggerStepThrough()> _
+	<System.Diagnostics.DebuggerStepThrough()>
 	Private Sub InitializeComponent()
 		Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(BilanMatière))
 		Me.GroupBoxRégion = New System.Windows.Forms.GroupBox()
@@ -33,10 +33,11 @@ Partial Class BilanMatière
 		Me.ListBoxNom = New System.Windows.Forms.ListBox()
 		Me.LabelNuméro = New System.Windows.Forms.Label()
 		Me.ListBoxNuméro = New System.Windows.Forms.ListBox()
-		Me.Label1 = New System.Windows.Forms.Label()
-		Me.ListBox1 = New System.Windows.Forms.ListBox()
-		Me.Button2 = New System.Windows.Forms.Button()
-		Me.Button1 = New System.Windows.Forms.Button()
+		Me.LabelRegion = New System.Windows.Forms.Label()
+		Me.ListBoxRegion = New System.Windows.Forms.ListBox()
+		Me.ButtonAccueil = New System.Windows.Forms.Button()
+		Me.ButtonRetour = New System.Windows.Forms.Button()
+		Me.ButtonQuitter = New System.Windows.Forms.Button()
 		Me.GroupBoxRégion.SuspendLayout()
 		Me.SuspendLayout()
 		'
@@ -61,7 +62,9 @@ Partial Class BilanMatière
 		'
 		'ComboBoxMatière
 		'
+		Me.ComboBoxMatière.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
 		Me.ComboBoxMatière.FormattingEnabled = True
+		Me.ComboBoxMatière.Items.AddRange(New Object() {"Algorithmique", "Base de données", "Droit", "Expression", "Gestion", "Langage C", "Langage Java", "Mathématiques", "Programmation web", "Réseau", "Système", "Visual Basic .NET", "Anglais", "Chinois", "Espagnol"})
 		Me.ComboBoxMatière.Location = New System.Drawing.Point(60, 16)
 		Me.ComboBoxMatière.Name = "ComboBoxMatière"
 		Me.ComboBoxMatière.Size = New System.Drawing.Size(366, 21)
@@ -129,50 +132,60 @@ Partial Class BilanMatière
 		Me.ListBoxNuméro.Size = New System.Drawing.Size(53, 199)
 		Me.ListBoxNuméro.TabIndex = 18
 		'
-		'Label1
+		'LabelRegion
 		'
-		Me.Label1.AutoSize = True
-		Me.Label1.Location = New System.Drawing.Point(68, 125)
-		Me.Label1.Name = "Label1"
-		Me.Label1.Size = New System.Drawing.Size(32, 13)
-		Me.Label1.TabIndex = 25
-		Me.Label1.Text = "Nom:"
+		Me.LabelRegion.AutoSize = True
+		Me.LabelRegion.Location = New System.Drawing.Point(68, 125)
+		Me.LabelRegion.Name = "LabelRegion"
+		Me.LabelRegion.Size = New System.Drawing.Size(44, 13)
+		Me.LabelRegion.TabIndex = 25
+		Me.LabelRegion.Text = "Région:"
 		'
-		'ListBox1
+		'ListBoxRegion
 		'
-		Me.ListBox1.FormattingEnabled = True
-		Me.ListBox1.Location = New System.Drawing.Point(71, 144)
-		Me.ListBox1.Name = "ListBox1"
-		Me.ListBox1.Size = New System.Drawing.Size(120, 199)
-		Me.ListBox1.TabIndex = 24
+		Me.ListBoxRegion.FormattingEnabled = True
+		Me.ListBoxRegion.Location = New System.Drawing.Point(71, 144)
+		Me.ListBoxRegion.Name = "ListBoxRegion"
+		Me.ListBoxRegion.Size = New System.Drawing.Size(120, 199)
+		Me.ListBoxRegion.TabIndex = 24
 		'
-		'Button2
+		'ButtonAccueil
 		'
-		Me.Button2.Location = New System.Drawing.Point(197, 349)
-		Me.Button2.Name = "Button2"
-		Me.Button2.Size = New System.Drawing.Size(248, 31)
-		Me.Button2.TabIndex = 27
-		Me.Button2.Text = "Accueil"
-		Me.Button2.UseVisualStyleBackColor = True
+		Me.ButtonAccueil.Location = New System.Drawing.Point(199, 349)
+		Me.ButtonAccueil.Name = "ButtonAccueil"
+		Me.ButtonAccueil.Size = New System.Drawing.Size(244, 31)
+		Me.ButtonAccueil.TabIndex = 27
+		Me.ButtonAccueil.Text = "Accueil"
+		Me.ButtonAccueil.UseVisualStyleBackColor = True
 		'
-		'Button1
+		'ButtonRetour
 		'
-		Me.Button1.Location = New System.Drawing.Point(12, 349)
-		Me.Button1.Name = "Button1"
-		Me.Button1.Size = New System.Drawing.Size(179, 31)
-		Me.Button1.TabIndex = 26
-		Me.Button1.Text = "Retour"
-		Me.Button1.UseVisualStyleBackColor = True
+		Me.ButtonRetour.Location = New System.Drawing.Point(12, 349)
+		Me.ButtonRetour.Name = "ButtonRetour"
+		Me.ButtonRetour.Size = New System.Drawing.Size(181, 31)
+		Me.ButtonRetour.TabIndex = 26
+		Me.ButtonRetour.Text = "Retour"
+		Me.ButtonRetour.UseVisualStyleBackColor = True
+		'
+		'ButtonQuitter
+		'
+		Me.ButtonQuitter.Location = New System.Drawing.Point(199, 349)
+		Me.ButtonQuitter.Name = "ButtonQuitter"
+		Me.ButtonQuitter.Size = New System.Drawing.Size(244, 31)
+		Me.ButtonQuitter.TabIndex = 28
+		Me.ButtonQuitter.Text = "Quitter"
+		Me.ButtonQuitter.UseVisualStyleBackColor = True
 		'
 		'BilanMatière
 		'
 		Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
 		Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
 		Me.ClientSize = New System.Drawing.Size(457, 390)
-		Me.Controls.Add(Me.Button2)
-		Me.Controls.Add(Me.Button1)
-		Me.Controls.Add(Me.Label1)
-		Me.Controls.Add(Me.ListBox1)
+		Me.Controls.Add(Me.ButtonQuitter)
+		Me.Controls.Add(Me.ButtonAccueil)
+		Me.Controls.Add(Me.ButtonRetour)
+		Me.Controls.Add(Me.LabelRegion)
+		Me.Controls.Add(Me.ListBoxRegion)
 		Me.Controls.Add(Me.LabelNom)
 		Me.Controls.Add(Me.ListBoxPrénom)
 		Me.Controls.Add(Me.LabelPrénom)
@@ -181,6 +194,7 @@ Partial Class BilanMatière
 		Me.Controls.Add(Me.ListBoxNuméro)
 		Me.Controls.Add(Me.GroupBoxRégion)
 		Me.Controls.Add(Me.Titre)
+		Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
 		Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
 		Me.MaximizeBox = False
 		Me.Name = "BilanMatière"
@@ -203,8 +217,9 @@ Partial Class BilanMatière
 	Friend WithEvents ListBoxNom As ListBox
 	Friend WithEvents LabelNuméro As Label
 	Friend WithEvents ListBoxNuméro As ListBox
-	Friend WithEvents Label1 As Label
-	Friend WithEvents ListBox1 As ListBox
-	Friend WithEvents Button2 As Button
-	Friend WithEvents Button1 As Button
+	Friend WithEvents LabelRegion As Label
+	Friend WithEvents ListBoxRegion As ListBox
+	Friend WithEvents ButtonAccueil As Button
+	Friend WithEvents ButtonRetour As Button
+	Friend WithEvents ButtonQuitter As Button
 End Class

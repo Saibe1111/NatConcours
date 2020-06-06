@@ -25,6 +25,7 @@ Partial Class InscriptionPart1
 		Me.components = New System.ComponentModel.Container()
 		Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(InscriptionPart1))
 		Me.PersonneGroup = New System.Windows.Forms.GroupBox()
+		Me.LabelAgeValeur = New System.Windows.Forms.Label()
 		Me.HScrollBarAge = New System.Windows.Forms.HScrollBar()
 		Me.LabelAge = New System.Windows.Forms.Label()
 		Me.LabelPrénom = New System.Windows.Forms.Label()
@@ -42,7 +43,6 @@ Partial Class InscriptionPart1
 		Me.Titre = New System.Windows.Forms.Label()
 		Me.ButtonQuitter = New System.Windows.Forms.Button()
 		Me.Timer = New System.Windows.Forms.Timer(Me.components)
-		Me.LabelAgeValeur = New System.Windows.Forms.Label()
 		Me.PersonneGroup.SuspendLayout()
 		Me.AdresseGroup.SuspendLayout()
 		Me.SuspendLayout()
@@ -61,6 +61,15 @@ Partial Class InscriptionPart1
 		Me.PersonneGroup.Size = New System.Drawing.Size(196, 106)
 		Me.PersonneGroup.TabIndex = 0
 		Me.PersonneGroup.TabStop = False
+		'
+		'LabelAgeValeur
+		'
+		Me.LabelAgeValeur.AutoSize = True
+		Me.LabelAgeValeur.Location = New System.Drawing.Point(36, 74)
+		Me.LabelAgeValeur.Name = "LabelAgeValeur"
+		Me.LabelAgeValeur.Size = New System.Drawing.Size(19, 13)
+		Me.LabelAgeValeur.TabIndex = 8
+		Me.LabelAgeValeur.Text = "18"
 		'
 		'HScrollBarAge
 		'
@@ -208,21 +217,12 @@ Partial Class InscriptionPart1
 		Me.ButtonQuitter.Name = "ButtonQuitter"
 		Me.ButtonQuitter.Size = New System.Drawing.Size(196, 42)
 		Me.ButtonQuitter.TabIndex = 11
-		Me.ButtonQuitter.Text = "Quitter"
+		Me.ButtonQuitter.Text = "Accueil"
 		Me.ButtonQuitter.UseVisualStyleBackColor = True
 		'
 		'Timer
 		'
 		Me.Timer.Interval = 1000
-		'
-		'LabelAgeValeur
-		'
-		Me.LabelAgeValeur.AutoSize = True
-		Me.LabelAgeValeur.Location = New System.Drawing.Point(36, 74)
-		Me.LabelAgeValeur.Name = "LabelAgeValeur"
-		Me.LabelAgeValeur.Size = New System.Drawing.Size(19, 13)
-		Me.LabelAgeValeur.TabIndex = 8
-		Me.LabelAgeValeur.Text = "18"
 		'
 		'InscriptionPart1
 		'
@@ -240,7 +240,7 @@ Partial Class InscriptionPart1
 		Me.MinimizeBox = False
 		Me.Name = "InscriptionPart1"
 		Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-		Me.Text = "NatConcours - Inscription 1/2 - 00:00:00 - Fin : 1m 00s"
+		Me.Text = "NatConcours"
 		Me.PersonneGroup.ResumeLayout(False)
 		Me.PersonneGroup.PerformLayout()
 		Me.AdresseGroup.ResumeLayout(False)

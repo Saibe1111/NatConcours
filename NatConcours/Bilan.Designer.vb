@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Bilan
 	Inherits System.Windows.Forms.Form
 
 	'Form remplace la méthode Dispose pour nettoyer la liste des composants.
-	<System.Diagnostics.DebuggerNonUserCode()> _
+	<System.Diagnostics.DebuggerNonUserCode()>
 	Protected Overrides Sub Dispose(ByVal disposing As Boolean)
 		Try
 			If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class Bilan
 	'REMARQUE : la procédure suivante est requise par le Concepteur Windows Form
 	'Elle peut être modifiée à l'aide du Concepteur Windows Form.  
 	'Ne la modifiez pas à l'aide de l'éditeur de code.
-	<System.Diagnostics.DebuggerStepThrough()> _
+	<System.Diagnostics.DebuggerStepThrough()>
 	Private Sub InitializeComponent()
 		Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Bilan))
 		Me.Titre = New System.Windows.Forms.Label()
@@ -28,6 +28,7 @@ Partial Class Bilan
 		Me.ButtonMatière = New System.Windows.Forms.Button()
 		Me.ButtonRetour = New System.Windows.Forms.Button()
 		Me.ButtonQuitter = New System.Windows.Forms.Button()
+		Me.LabelNbr = New System.Windows.Forms.Label()
 		Me.SuspendLayout()
 		'
 		'Titre
@@ -43,7 +44,7 @@ Partial Class Bilan
 		'
 		'ButtonIndiv
 		'
-		Me.ButtonIndiv.Location = New System.Drawing.Point(12, 64)
+		Me.ButtonIndiv.Location = New System.Drawing.Point(12, 109)
 		Me.ButtonIndiv.Name = "ButtonIndiv"
 		Me.ButtonIndiv.Size = New System.Drawing.Size(296, 39)
 		Me.ButtonIndiv.TabIndex = 13
@@ -52,7 +53,7 @@ Partial Class Bilan
 		'
 		'ButtonMatière
 		'
-		Me.ButtonMatière.Location = New System.Drawing.Point(12, 109)
+		Me.ButtonMatière.Location = New System.Drawing.Point(12, 154)
 		Me.ButtonMatière.Name = "ButtonMatière"
 		Me.ButtonMatière.Size = New System.Drawing.Size(296, 39)
 		Me.ButtonMatière.TabIndex = 14
@@ -61,28 +62,37 @@ Partial Class Bilan
 		'
 		'ButtonRetour
 		'
-		Me.ButtonRetour.Location = New System.Drawing.Point(12, 154)
+		Me.ButtonRetour.Location = New System.Drawing.Point(12, 199)
 		Me.ButtonRetour.Name = "ButtonRetour"
 		Me.ButtonRetour.Size = New System.Drawing.Size(296, 39)
 		Me.ButtonRetour.TabIndex = 15
-		Me.ButtonRetour.Text = "Retour"
+		Me.ButtonRetour.Text = "Accueil"
 		Me.ButtonRetour.UseVisualStyleBackColor = True
 		'
 		'ButtonQuitter
 		'
-		Me.ButtonQuitter.Location = New System.Drawing.Point(12, 154)
+		Me.ButtonQuitter.Location = New System.Drawing.Point(12, 199)
 		Me.ButtonQuitter.Name = "ButtonQuitter"
 		Me.ButtonQuitter.Size = New System.Drawing.Size(296, 39)
 		Me.ButtonQuitter.TabIndex = 16
 		Me.ButtonQuitter.Text = "Quitter"
 		Me.ButtonQuitter.UseVisualStyleBackColor = True
-		Me.ButtonQuitter.Visible = False
+		'
+		'LabelNbr
+		'
+		Me.LabelNbr.AutoSize = True
+		Me.LabelNbr.Location = New System.Drawing.Point(18, 77)
+		Me.LabelNbr.Name = "LabelNbr"
+		Me.LabelNbr.Size = New System.Drawing.Size(174, 13)
+		Me.LabelNbr.TabIndex = 17
+		Me.LabelNbr.Text = "Nombre d’inscriptions enregistrées :"
 		'
 		'Bilan
 		'
 		Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
 		Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-		Me.ClientSize = New System.Drawing.Size(320, 203)
+		Me.ClientSize = New System.Drawing.Size(320, 250)
+		Me.Controls.Add(Me.LabelNbr)
 		Me.Controls.Add(Me.ButtonQuitter)
 		Me.Controls.Add(Me.ButtonRetour)
 		Me.Controls.Add(Me.ButtonMatière)
@@ -104,4 +114,5 @@ Partial Class Bilan
 	Friend WithEvents ButtonMatière As Button
 	Friend WithEvents ButtonRetour As Button
 	Friend WithEvents ButtonQuitter As Button
+	Friend WithEvents LabelNbr As Label
 End Class

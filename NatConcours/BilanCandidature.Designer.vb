@@ -49,6 +49,7 @@ Partial Class BilanCandidature
 		Me.LabelRegion = New System.Windows.Forms.Label()
 		Me.ButtonRetour = New System.Windows.Forms.Button()
 		Me.ButtonAccueil = New System.Windows.Forms.Button()
+		Me.ButtonQuitter = New System.Windows.Forms.Button()
 		Me.GroupBoxNomPrénom.SuspendLayout()
 		Me.GroupBoxInformation.SuspendLayout()
 		Me.GroupBoxAdresse.SuspendLayout()
@@ -79,11 +80,11 @@ Partial Class BilanCandidature
 		'
 		'ComboBoxNomPrénom
 		'
+		Me.ComboBoxNomPrénom.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
 		Me.ComboBoxNomPrénom.FormattingEnabled = True
 		Me.ComboBoxNomPrénom.Location = New System.Drawing.Point(97, 16)
 		Me.ComboBoxNomPrénom.Name = "ComboBoxNomPrénom"
 		Me.ComboBoxNomPrénom.Size = New System.Drawing.Size(270, 21)
-		Me.ComboBoxNomPrénom.Sorted = True
 		Me.ComboBoxNomPrénom.TabIndex = 12
 		'
 		'Titre
@@ -313,11 +314,21 @@ Partial Class BilanCandidature
 		Me.ButtonAccueil.Text = "Accueil"
 		Me.ButtonAccueil.UseVisualStyleBackColor = True
 		'
+		'ButtonQuitter
+		'
+		Me.ButtonQuitter.Location = New System.Drawing.Point(207, 521)
+		Me.ButtonQuitter.Name = "ButtonQuitter"
+		Me.ButtonQuitter.Size = New System.Drawing.Size(181, 31)
+		Me.ButtonQuitter.TabIndex = 21
+		Me.ButtonQuitter.Text = "Quitter"
+		Me.ButtonQuitter.UseVisualStyleBackColor = True
+		'
 		'BilanCandidature
 		'
 		Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
 		Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
 		Me.ClientSize = New System.Drawing.Size(403, 562)
+		Me.Controls.Add(Me.ButtonQuitter)
 		Me.Controls.Add(Me.ButtonAccueil)
 		Me.Controls.Add(Me.ButtonRetour)
 		Me.Controls.Add(Me.GroupBoxEpreuve)
@@ -325,6 +336,7 @@ Partial Class BilanCandidature
 		Me.Controls.Add(Me.GroupBoxInformation)
 		Me.Controls.Add(Me.GroupBoxNomPrénom)
 		Me.Controls.Add(Me.Titre)
+		Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
 		Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
 		Me.MaximizeBox = False
 		Me.Name = "BilanCandidature"
@@ -374,4 +386,5 @@ Partial Class BilanCandidature
 	Friend WithEvents LabelEcritMatière1 As Label
 	Friend WithEvents ButtonRetour As Button
 	Friend WithEvents ButtonAccueil As Button
+	Friend WithEvents ButtonQuitter As Button
 End Class
